@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incentivized Recycling Machine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .instructions {
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #555;
+    }
+    .button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Incentivized Recycling Machine</div>
+    
+    <div class="instructions">Insert your plastic bottle into the machine to recycle it.</div>
+    
+    <button class="button" onclick="recycleBottle()">Insert Bottle</button>
+    
+    <div class="message" id="message">Earn cashback rewards or coupons for each bottle recycled!</div>
+  </div>
+
+  <script>
+    function recycleBottle() {
+      const message = document.getElementById("message");
+      message.textContent = "Bottle detected. Processing...";
+      
+      setTimeout(() => {
+        message.textContent = "Bottle successfully recycled! You’ve earned a cashback reward.";
+      }, 2000); // Simulates processing time
+    }
+  </script>
+</body>
+</html>

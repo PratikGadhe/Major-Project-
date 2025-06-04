@@ -1,0 +1,16 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EcoRecycleApp | Welcome</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="welcome-page">
+  <div class="container">
+    <h1>♻️ Welcome to EcoRecycleApp</h1>
+    <p class="subtitle">Turn Waste into Rewards!<br>Recycle plastic bottles or metal cans and earn exciting benefits.</p>
+    <button onclick="window.location.href='/enter-items'">Start Recycling</button>
+  </div>
+</body>
+</html>
