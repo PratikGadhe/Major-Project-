@@ -1,20 +1,24 @@
-<!-- templates/enter_items.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Enter Items to Recycle</title>
+  <title>Enter Items</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body class="enter-page">
+<body>
   <div class="container">
-    <h1>🔄 Recycling Panel</h1>
-    <p class="subtitle">Enter number of plastic bottles or metal cans you want to recycle</p>
-    
-    <form action="/start-recycling" method="POST">
-      <input type="number" name="item_count" min="1" required placeholder="Enter count" />
+    <h1>Enter Number of Items</h1>
+    <p class="subtitle">Please enter how many plastic bottles or metal cans you want to recycle.</p>
+    <form action="/start-recycling" method="post">
+      <input type="number" name="item_count" min="1" required>
+      <br>
       <button type="submit">Submit</button>
     </form>
   </div>
+
+  <!-- Audio on load -->
+  <audio autoplay>
+    <source src="{{ url_for('static', filename='audio/input_prompt.mp3') }}" type="audio/mpeg">
+  </audio>
 </body>
 </html>

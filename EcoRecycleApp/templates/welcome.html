@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="Logo" class="logo">
+    <h1>Welcome To Incentivised Plastic / Metallic Can Recycling Machine</h1>
+    <p class="subtitle">Let's begin recycling!</p>
+    <form action="/enter-items" method="get">
+      <button type="submit">Start Recycling</button>
+    </form>
+  </div>
+
+  <!-- Audio on load -->
+  <audio autoplay>
+    <source src="{{ url_for('static', filename='audio/welcome_message.mp3') }}" type="audio/mpeg">
+  </audio>
+</body>
+</html>
