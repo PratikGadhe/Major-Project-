@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Detected</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .feedback-container {
+            text-align: center;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .points-info {
+            color: #f1f1f1;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .total-points {
+            color: #00ffcc;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        setTimeout(function() {
+            window.location.href = "/scanning-again";  // Loop back for next item
+        }, 5000); // 5 seconds delay
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="feedback-container">
+            <h1>{{ message }}</h1>
+            <div class="points-info">1x Bottle = 10 points</div>
+            <div class="points-info">1x Metallic Can = 20 points</div>
+            <div class="total-points">You’ve earned {{ points }} points so far!</div>
+        </div>
+    </div>
+</body>
+</html>
