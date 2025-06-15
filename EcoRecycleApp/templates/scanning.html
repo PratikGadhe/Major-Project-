@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scanning...</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .scanner-container {
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .eyes-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .eye {
+            width: 80px;
+            height: 80px;
+            background: #fff;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .pupil {
+            width: 30px;
+            height: 30px;
+            background: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            animation: look-down 1.0s infinite alternate;
+        }
+
+        @keyframes look-down {
+            0% {
+                top: 20px;
+                left: 25px;
+            }
+            100% {
+                top: 30px;
+                left: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scanner-container">
+        <h1>LOOKING FOR THE BOTTLE / METALLIC CAN . . .</h1>
+        <div class="eyes-wrapper">
+            <div class="eye">
+                <div class="pupil"></div>
+            </div>
+            <div class="eye">
+                <div class="pupil"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
